@@ -1,0 +1,3 @@
+[submodule "contracts/interfaces"]
+	path = contracts/interfaces
+	url = git@github.com:meta-node-blockchain/pos-interface.git

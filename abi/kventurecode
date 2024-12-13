@@ -1,0 +1,844 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string[]",
+				"name": "codeFEs",
+				"type": "string[]"
+			}
+		],
+		"name": "BlockManyCode",
+		"outputs": [
+			{
+				"internalType": "bool[]",
+				"name": "",
+				"type": "bool[]"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "buyer",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "planPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "quantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "lock",
+				"type": "bool"
+			},
+			{
+				"internalType": "bytes32[]",
+				"name": "codeHashes",
+				"type": "bytes32[]"
+			},
+			{
+				"internalType": "address",
+				"name": "_delegate",
+				"type": "address"
+			}
+		],
+		"name": "GenerateCode",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_trustedUSDT",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_masterPool",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_codePool",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_product",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_trustedNFT",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_kventure",
+				"type": "address"
+			}
+		],
+		"name": "initialize",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "buyer",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "codeHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "KGenerateCode",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint8",
+				"name": "version",
+				"type": "uint8"
+			}
+		],
+		"name": "Initialized",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_cloudMiningThreshold",
+				"type": "uint256"
+			}
+		],
+		"name": "SetCloudMiningThreshold",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_masterPool",
+				"type": "address"
+			}
+		],
+		"name": "SetMasterPool",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_nft",
+				"type": "address"
+			}
+		],
+		"name": "SetNFT",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_product",
+				"type": "address"
+			}
+		],
+		"name": "SetProduct",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_usdt",
+				"type": "address"
+			}
+		],
+		"name": "SetUsdt",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string[]",
+				"name": "codeFEs",
+				"type": "string[]"
+			}
+		],
+		"name": "UnblockManyCode",
+		"outputs": [
+			{
+				"internalType": "bool[]",
+				"name": "",
+				"type": "bool[]"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "boostSpeedDecimal",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "CalculateCurrentRateBoost",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "codePool",
+		"outputs": [
+			{
+				"internalType": "contract CodePool",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "deployedDate",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "codeHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "getCodeInfoSmC",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "codeHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "activeTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expirationActiveTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostSpeed",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rateBoost",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "enum Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "origin",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mintedAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "releasePercentage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lockTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "keyHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentDeposit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastestClaim",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Code",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint32",
+				"name": "_page",
+				"type": "uint32"
+			}
+		],
+		"name": "GetMyCode",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "isMore",
+				"type": "bool"
+			},
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "codeHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "activeTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expirationActiveTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostSpeed",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rateBoost",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "enum Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "origin",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mintedAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "releasePercentage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lockTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "keyHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentDeposit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastestClaim",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Code[]",
+				"name": "arrayPack",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "GetTotalMyCode",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint32",
+				"name": "_page",
+				"type": "uint32"
+			},
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "GetUserCode",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "isMore",
+				"type": "bool"
+			},
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "codeHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "activeTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "expirationActiveTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostSpeed",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rateBoost",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "enum Status",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "origin",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mintedAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "releasePercentage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lockTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "keyHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentDeposit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lastestClaim",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Code[]",
+				"name": "arrayPack",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "KCodePrice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "kventure",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "masterPool",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "mIdToPro",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "id",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes",
+				"name": "imgUrl",
+				"type": "bytes"
+			},
+			{
+				"internalType": "uint256",
+				"name": "memberPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "retailPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes",
+				"name": "desc",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bool",
+				"name": "active",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "mValidMiningTime",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "nft",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "product",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "rateBoost",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "returnRIP",
+		"outputs": [
+			{
+				"internalType": "uint32",
+				"name": "",
+				"type": "uint32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "usdt",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "usdtDecimal",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

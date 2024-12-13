@@ -1,0 +1,34 @@
+
+# DatabaseURL: "root:Abc123456@tcp(127.0.0.1:3306)/kven?charset=utf8mb4&parseTime=True&loc=Local" 
+DatabaseURL: "new_cms_user:HAQBF8X4jQ9qA.@tcp(127.0.0.1:3307)/kven?charset=utf8mb4&parseTime=True&loc=Local" 
+StorageDatabaseURL: "root:Abc123456@tcp(127.0.0.1:3306)/log?charset=utf8mb4&parseTime=True&loc=Local"  
+APIAddress: "0.0.0.0:8080" 
+Address: "fb01fab6f204d6ad4ab1f82b5ce626e770aa4542" # Admin Address
+PrivateKey_: "59f4157e928bb126ae4b92c196f592d5747741c75cb302e524491097955ef957"
+MetaNodeVersion: "0.0.1" 
+
+NodeAddress: "3a24f5f813cba9ac7c6eb8a416b25cf5c6458e32" 
+NodeConnectionAddress: "node" 
+
+StorageAddress: "0xda7284faC5E804F8b9d71Aa39310f0f86776b51d"
+StorageConnectionAddress: "storage"
+
+KvenAddress: "0x623962CB631B56C1fb546136772e0EA516a21323"  # Kventure Address
+KvenABIPath: "kventure"
+
+ProductAddress: "0x79965F966Cdb14130127EEB9E8411869893ba26A"
+ProductABIPath: "../../abi/product"
+
+RetailAddress: "0xb5b96e5da057f2b53f299ad41555bdecb5bbca09"
+RetailABIPath: "../../abi/reatail"
+UsdtABIPath: "../../abi/usdt"
+DnsLink_: "http://127.0.0.1:7500/api/dns/connection-address/" # Devnet
+
+# KvenBonusHash: "c653875721be08f80a5e8e9c5924cbd3fc5b4ae8d5da0eff0d0f69a4427c067d" #old
+KvenBonusHash : "cb9fee3218ee3d09ca2e7f4197f84a5674add7673124c586abe5ecb8667508a0" # Event PayBonus
+KvenSubHash : "92eb93da2e40ea32289b1ade09b82e13d8e94b2e71289efbe14e393b1e0d8531" # Event Subcribe
+ProductBuyHash : "a5f44f7ac43eb1c48c68123962c61251433056a0cbc136e6d2f9c78ac51a40b4"
+RetailDiscountHash : "45b8b0c740d81c9453076268807eb6dad8c55182af9f93cbc21a342229f8900e"
+
+ChatID : "-4106697855" 
+BotToken : "1445784583:AAGIJpLzxGsB7csutW2fj7MVIOQlvQNa1XY"

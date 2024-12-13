@@ -1,0 +1,6 @@
+.deps
+artifacts
+node_modules
+cache/
+out/
+lib/

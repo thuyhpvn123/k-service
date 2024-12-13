@@ -1,0 +1,22 @@
+# DatabaseURL: "root:123456789@tcp(127.0.0.1:3306)/kventure?charset=utf8mb4&parseTime=True&loc=Local"
+# APIAddress: "127.0.0.1:8066" 
+# JWTSecretKey: "BEAUTY_SECRET"
+# AwsSESID: "xxx"
+# AwsSESSecret: "xxx"
+# AwsSESRegion: "us-west-2"
+# AwsSESSendAddress: "abc@gmail.com"
+
+Address: "01f99a7f1a8331d4397bf1c2260cb5f68146e7c3" # Admin Address
+PrivateKey_: "003b60c1971ec7d8238f3706bc230f510acb28ce5e5bcb3d9b0df49644eed4db"
+MetaNodeVersion: "0.0.1" 
+
+NodeAddress: "0x9b9b7cea3f4cb8dd4553724abcc1d5577987f662" 
+NodeConnectionAddress: "node" 
+
+StorageAddress: "0xda7284faC5E804F8b9d71Aa39310f0f86776b51d"
+StorageConnectionAddress: "storage"
+
+KvenAddress: "0x3b6829711D11b74de638ca3eE0ae92e66D02B8A0"  # Kventure Address
+KvenABIPath: "kventure_abi.json"
+
+DnsLink_: "https://raw.githubusercontent.com/meta-node-blockchain/meta-node-dns/main/test/test_client.json"

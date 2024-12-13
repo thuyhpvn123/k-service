@@ -1,0 +1,1154 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "payable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "buyer",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes32",
+				"name": "orderId",
+				"type": "bytes32"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes32[]",
+				"name": "productIds",
+				"type": "bytes32[]"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256[]",
+				"name": "quantities",
+				"type": "uint256[]"
+			}
+		],
+		"name": "SaleOrder",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "add",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "quantities",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "prices",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "idArr",
+						"type": "bytes32[]"
+					},
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentFrom",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "currentPool",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "paymentID",
+						"type": "bytes32"
+					}
+				],
+				"indexed": false,
+				"internalType": "struct KProduct.EventInput",
+				"name": "eventOrder",
+				"type": "tuple"
+			}
+		],
+		"name": "eBuyProduct",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "token",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "bytes32",
+				"name": "codeHash",
+				"type": "bytes32"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "datePurchase",
+				"type": "uint256"
+			}
+		],
+		"name": "eCodeTransaction",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "ActiveProduct",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_id",
+				"type": "bytes32"
+			}
+		],
+		"name": "AdminActiveProduct",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_imgUrl",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_memberPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_retailPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_desc",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "_status",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_boostTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_reward",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_vipPrice",
+				"type": "uint256"
+			}
+		],
+		"name": "AdminAddProduct",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_id",
+				"type": "bytes32"
+			}
+		],
+		"name": "AdminDeactiveProduct",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_id",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_updateAt",
+				"type": "uint256"
+			}
+		],
+		"name": "AdminEditUpdateAt",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_id",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "string",
+				"name": "_imgUrl",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_desc",
+				"type": "string"
+			}
+		],
+		"name": "AdminUpdateProductInfo",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "AdminViewProduct",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "imgUrl",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "memberPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "retailPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "name",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "desc",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vipPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updateAt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Product[]",
+				"name": "_products",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Admins",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_id",
+				"type": "bytes32"
+			}
+		],
+		"name": "GetProductById",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "imgUrl",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "memberPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "retailPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "name",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "desc",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vipPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updateAt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Product",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "IsAdmin",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "ListProductID",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "MasterPool",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "lock",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "codeHashes",
+						"type": "bytes32[]"
+					},
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "idPayment",
+						"type": "bytes32"
+					}
+				],
+				"internalType": "struct OrderInput[]",
+				"name": "orderInputs",
+				"type": "tuple[]"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			}
+		],
+		"name": "Order",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "lock",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes32[]",
+						"name": "codeHashes",
+						"type": "bytes32[]"
+					},
+					{
+						"internalType": "address",
+						"name": "delegate",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "idPayment",
+						"type": "bytes32"
+					}
+				],
+				"internalType": "struct OrderInput[]",
+				"name": "orderLockInputs",
+				"type": "tuple[]"
+			},
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			}
+		],
+		"name": "OrderLock",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "Owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "POS",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_admin",
+				"type": "address"
+			}
+		],
+		"name": "RemoveAdmin",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "ReturnRIP",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "SCKven",
+		"outputs": [
+			{
+				"internalType": "contract IKventure",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "SCKvenCode",
+		"outputs": [
+			{
+				"internalType": "contract IKventureCode",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "SCOrder",
+		"outputs": [
+			{
+				"internalType": "contract IOrder",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "SCUsdt",
+		"outputs": [
+			{
+				"internalType": "contract IERC20",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_admin",
+				"type": "address"
+			}
+		],
+		"name": "SetAdmin",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_kventureCode",
+				"type": "address"
+			}
+		],
+		"name": "SetKventureCode",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_masterPool",
+				"type": "address"
+			}
+		],
+		"name": "SetMasterPool",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_order",
+				"type": "address"
+			}
+		],
+		"name": "SetOrder",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_pos",
+				"type": "address"
+			}
+		],
+		"name": "SetPOS",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_kventure",
+				"type": "address"
+			}
+		],
+		"name": "SetRef",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_usdt",
+				"type": "address"
+			}
+		],
+		"name": "SetUsdt",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "UserViewProduct",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "imgUrl",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "memberPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "retailPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "name",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "desc",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vipPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updateAt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Product[]",
+				"name": "_products",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_id",
+				"type": "bytes32"
+			}
+		],
+		"name": "ViewProduct",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "imgUrl",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "memberPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "retailPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "name",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "desc",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vipPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updateAt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Product",
+				"name": "rs",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_updateAt",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_limit",
+				"type": "uint256"
+			}
+		],
+		"name": "ViewProducts",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "id",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "imgUrl",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "memberPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "retailPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "name",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "desc",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bool",
+						"name": "active",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "boostTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "reward",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vipPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updateAt",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Product[]",
+				"name": "rs",
+				"type": "tuple[]"
+			},
+			{
+				"internalType": "bool",
+				"name": "isMore",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "lastIndex",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"name": "mIDToProduct",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "id",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "bytes",
+				"name": "imgUrl",
+				"type": "bytes"
+			},
+			{
+				"internalType": "uint256",
+				"name": "memberPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "retailPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bytes",
+				"name": "name",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "desc",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bool",
+				"name": "active",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "boostTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reward",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "vipPrice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "updateAt",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

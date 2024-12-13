@@ -1,0 +1,22 @@
+
+DatabaseURL: "root:Abc123456@tcp(127.0.0.1:3306)/kven2?charset=utf8mb4&parseTime=True&loc=Local"  
+APIAddress: "0.0.0.0:8080" 
+Address: "97126b71376f7e55fba904fdaa9df0dbd396612f" # Admin Address
+PrivateKey_: "2b3aa0f620d2d73c046cd93eb64f2eb687a95b22e278500aa251c8c9dda1203b"
+MetaNodeVersion: "0.0.1" 
+
+NodeAddress: "3a24f5f813cba9ac7c6eb8a416b25cf5c6458e32" 
+NodeConnectionAddress: "node" 
+
+StorageAddress: "0xda7284faC5E804F8b9d71Aa39310f0f86776b51d"
+StorageConnectionAddress: "storage"
+
+KvenAddress: "0x9eeB553fC6d5D6f9b35a2728121317DCc2eA6C38"  # Kventure Address
+KvenABIPath: "codepool"
+
+DnsLink_: "http://127.0.0.1:7500/api/dns/connection-address/"
+
+
+HASH : "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+
+KvenBonusHash : "c653875721be08f80a5e8e9c5924cbd3fc5b4ae8d5da0eff0d0f69a4427c067d"
